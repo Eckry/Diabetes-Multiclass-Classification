@@ -40,6 +40,7 @@ A sequential dense neural network was designed with the following architecture:
 ### 3. Classic Machine Learning Baseline
 * **Support Vector Machine (SVC):** Fine-tuned parameters exploring `kernel` types (Linear vs. RBF) and regularization coefficients `C`.
 * **K-Nearest Neighbors (KNN):** Adjusted the number of neighbors `n_neighbors`, distance weighting (`uniform` vs. `distance`), and distance metrics (`euclidean` vs. `manhattan`).
+* **Random Forest Classifier:** Ensembled tree-based architecture tuned via `GridSearchCV`. Explored parameters including `n_estimators` (up to 400 trees), `max_depth`, `min_samples_split`, and `min_samples_leaf` to minimize overfitting while managing class weights.
 
 ---
 
@@ -58,9 +59,13 @@ Models were thoroughly evaluated using confusion matrices and detailed classific
 | **Optimized KNN** | *0.92* | *0.92* | Highly sensitive to the local feature density of clinical metrics. |
 
 ### Visualizations
+## Confusion Matrix for Random Forest
 ![Confusion matrix of Random Forest](./images/cm_random_forest.jpeg)
+## Confusion Matrix for Neural Network
 ![Confusion matrix of Neural Network](./images/cm_neural.jpeg)
+## Confusion Matrix for SVM
 ![Confusion matrix of SVM](./images/cm_svm.jpeg)
+## Confusion Matrix for KNN
 ![Confusion matrix of KNN](./images/cm_knn.jpeg)
 ---
 
@@ -73,6 +78,6 @@ Models were thoroughly evaluated using confusion matrices and detailed classific
 2. Install the required dependencies:
     ```bash
     pip install pandas numpy scikit-learn tensorflow matplotlib
-    ```bash
+    ```
 3. Ensure the dataset.csv file is placed in the project root directory.
 4. Run the Python script or open the Jupyter Notebook to reproduce the training and evaluation pipelines.
