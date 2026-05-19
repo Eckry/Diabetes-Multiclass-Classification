@@ -166,5 +166,3 @@ m_dis = ConfusionMatrixDisplay(m)
 print(classification_report(y_test_encoded, y_preds_knn))
 print(recall_score(y_test_encoded, y_preds_knn, average='weighted'))
 m_dis.plot()
-
-
