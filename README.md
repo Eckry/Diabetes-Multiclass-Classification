@@ -52,13 +52,16 @@ Models were thoroughly evaluated using confusion matrices and detailed classific
 
 | Model | Recall (Weighted) | F1-Score (Weighted) | Performance Insights |
 | :--- | :---: | :---: | :--- |
+| **Optimized Random Forest** | *0.98* | *0.98* | Highly sensitive to the local feature density of clinical metrics. |
 | **Neural Network (MLP)** | *0.94* | *0.94* | Outstanding generalization capability driven by EarlyStopping. |
 | **Optimized SVM** | *0.94* | *0.95* | Robust decision boundaries achieved via fine-tuned C-parameters. |
 | **Optimized KNN** | *0.92* | *0.92* | Highly sensitive to the local feature density of clinical metrics. |
 
 ### Visualizations
-*(Save your confusion matrix plots as .png files, upload them to an `images` folder in this repo, and uncomment the lines below to display them)*
-
+![Confusion matrix of Random Forest](./images/cm_random_forest.jpeg)
+![Confusion matrix of Neural Network](./images/cm_neural.jpeg)
+![Confusion matrix of SVM](./images/cm_svm.jpeg)
+![Confusion matrix of KNN](./images/cm_knn.jpeg)
 ---
 
 ## 💻 How to Run This Project
